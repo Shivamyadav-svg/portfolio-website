@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.nav-box {
+    width: 150px;
+    height: 110px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.nav-box img {
+    width: 125px;
+    margin-bottom:0px;
+}
+
+.nav-box:hover {
+    background: white;
+    color: black;
+}
+
+.social {
+    position: absolute;
+    right: 40px;
+}
+
+.social a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 300;
+}
+
+.hero-text h2 {
+    letter-spacing: 8px;
+    color: #ff5a5a;
+}
+
+/* PROFILE PHOTO */
+.hero-profile img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+/* BLINK */
+.blink {
+    animation: blink 1.2s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* PAGES */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 120px;
+}
+
+.back-btn {
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.project-card {
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.4);
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+/* FIXED TEXT STYLE */
+.project-card span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.65);
+    line-height: 1.4;
+    word-wrap: break-word;
+    z-index: 1;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.skills-grid div {
+    border: 1px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* UTIL */
+.center {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* PROJECT HOVER GITHUB OVERLAY */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay a {
+    pointer-events: auto;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 12px 22px;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.project-overlay a:hover {
+    background: white;
+    color: black;
+}
+
+
